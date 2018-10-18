@@ -1,4 +1,11 @@
-from vanillaParameterObjects import ParameterSliderTextInput, VanillaSingleValueParameter
+import os
+import sys
+
+dynamicParametersLibFolder = os.path.dirname(os.getcwd())
+if not dynamicParametersLibFolder in sys.path:
+    sys.path.insert(0, dynamicParametersLibFolder)
+
+from dynamicParameters.vanillaParameterObjects import ParameterSliderTextInput, VanillaSingleValueParameter
 from vanilla import Window, Group
 
 class ParameterTester:

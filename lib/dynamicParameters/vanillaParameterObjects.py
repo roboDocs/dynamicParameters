@@ -125,7 +125,7 @@ class ParameterSliderTextInput(Group):
             self.title = TextBox((0, 3, 65, 30), title, sizeStyle='small')
         if parameter.dissociable:
             editTextPosSize = (-65, 0, 40, 22)
-            self.checkBox = CheckBox((-22, 5, 22, 25), u'∞', callback=self.setFree, value=True, sizeStyle='mini')
+            self.checkBox = CheckBox((-22, 0, 22, 22), u'∞', callback=self.setFree, value=True, sizeStyle='mini')
         self.slider = Slider(sliderPosSize, minValue=parameter.limits[0], maxValue=parameter.limits[1], value=parameter.value, callback=self.valueInput, sizeStyle='small')
         self.textInput = EditText(editTextPosSize, str(parameter.value), callback=self.valueInput, continuous=False, sizeStyle='small')
         self.parameter.bind(self)

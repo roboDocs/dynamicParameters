@@ -270,7 +270,7 @@ class SingleValueParameter(object):
 
     def _checkValue(self, value):
         if isinstance(value, str):
-            s = re.search('(\+\+|--)(\d*\.?\d*)', value)
+            s = re.search(r'(\+\+|--)(\d*\.?\d*)', value)
             if s is not None:
                 offset = float(s.group(2))
                 if s.group(1) == '++':
